@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ComplexGrid</title>
+    <style>
+        .gridcon {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-rows: minmax(200px, auto);
+            grid-gap: 1em;
+        }
+
+        .gridcon>div {
+            background-color: gray;
+            padding: 1em;
+        }
+
+        .gridcon>div:nth-child(even) {
+            background-color: lightgrey;
+        }
+
+        #box1 {
+            background-color: red;
+        }
+
+        #box2 {
+            background-color: purple;
+            grid-column: 2/4;
+        }
+
+        #box3 {
+            background-color: blue;
+            grid-column: 3/4;
+            grid-row: 2/4
+        }
+
+        #box4,
+        #box5 {
+            background-color: red;
+        }
+
+
+        #box6 {
+            background-color: purple;
+            grid-column: 1/3;
+            grid-row: 2/3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="gridcon">
+        <div id="box1">lorem 1</div>
+        <div id="box2">lorem 2</div>
+        <div id="box3">lorem 3</div>
+        <div id="box4">lorem 4</div>
+        <div id="box5">lorem 5</div>
+        <div id="box6">lorem 6</div>
+    </div>
+</body>
+
+</html>
